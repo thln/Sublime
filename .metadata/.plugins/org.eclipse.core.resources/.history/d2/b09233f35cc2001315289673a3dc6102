@@ -3,10 +3,8 @@ package com.sublime;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
-
 import com.facebook.*;
 import com.facebook.model.*;
-
 import android.widget.TextView;
 import android.content.Intent;
 
@@ -21,8 +19,7 @@ public class MainActivity extends Activity {
         Session.openActiveSession(this, true, new Session.StatusCallback() {
 
           // callback when session changes state
-          @SuppressWarnings("deprecation")
-		@Override
+          @Override
           public void call(Session session, SessionState state, Exception exception) {
         	  if (session.isOpened()) {
         		// make request to the /me API
